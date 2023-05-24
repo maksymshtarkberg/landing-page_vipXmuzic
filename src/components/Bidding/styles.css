@@ -1,0 +1,136 @@
+.container {
+  width: 360px;
+  height: 275px;
+}
+
+.bid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-bid {
+  background: linear-gradient(106.4deg, #bc8c46 11.37%, #ffde76 83.54%);
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.588205),
+    -7px -7px 16px rgba(79, 79, 85, 0.539827);
+  border-radius: 10px;
+  padding: 14px 18px;
+  color: #131a20;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 28px;
+  margin-right: 18px;
+  border: 0;
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+.btn-bid:active {
+  filter: drop-shadow(0px 0px 5px rgba(255, 222, 118, 0.8));
+  animation: glowFadeOut 1.3s ease-out forwards;
+  color: yellow;
+}
+
+.bid-ammount {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  letter-spacing: 1px;
+  color: #ffde76;
+  margin-bottom: 20px;
+}
+
+.MuiPaper-root.MuiSnackbarContent-root {
+  background: radial-gradient(
+    90.16% 143.01% at 15.32% 21.04%,
+    rgba(165, 239, 255, 0.2) 0%,
+    rgba(244, 253, 255, 0.184) 38.88%,
+    rgba(193, 230, 255, 0.1) 78.35%,
+    rgba(70, 144, 213, 0) 100%
+  );
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 4px 12px;
+  /* margin-top: -40px;
+  margin-bottom: -5px; */
+  min-width: 180px;
+  position: absolute;
+}
+
+.MuiSnackbar-root {
+  position: absolute !important ;
+  display: inline-block !important;
+  top: 0;
+}
+
+.buttons-cont {
+  padding-top: 40px;
+}
+
+.big-modal {
+  position: relative;
+  left: -120px;
+}
+
+.no-pad {
+  margin: 0;
+}
+
+/*  */
+
+@keyframes spinning82341 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.svg-glow {
+  filter: drop-shadow(0px 0px 5px rgba(255, 222, 118, 0.8));
+  animation: glowFadeOut 1.4s ease-out forwards;
+}
+
+@keyframes glowFadeOut {
+  0% {
+    filter: drop-shadow(0px 0px 5px rgba(255, 222, 118, 0.8));
+  }
+  100% {
+    filter: drop-shadow(0px 0px 5px rgba(255, 222, 118, 0));
+  }
+}
+
+/* @keyframes glowFadeOut {
+  0% {
+    text-shadow: none;
+  }
+  25% {
+    text-shadow: 0 0 10px rgba(255, 222, 118, 0.8);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 222, 118, 0.8);
+  }
+  75% {
+    text-shadow: 0 0 30px rgba(255, 222, 118, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 40px rgba(255, 222, 118, 0.8);
+  }
+} */
+
+.bid-text_mes {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3),
+    0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.disp-op {
+  animation: glowFadeOut 0.4s ease-out forwards;
+  opacity: 0;
+}
