@@ -1,15 +1,20 @@
 import "./styles.css";
 
-const CardOne = () => {
+const CardOne = ({ cardname, cardimage, crown, phraseStart }) => {
   return (
     <div className="myCard">
       <div className="innerCard">
+        <div className="card-icon">
+          <img src={crown} alt="crown" />
+        </div>
         <div className="frontSide">
-          <p className="title">FRONT SIDE</p>
-          <p>Hover Me</p>
+          <p className="title">{cardname} </p>
+          <p>{phraseStart}</p>
+
+          <img className="card-fun-icon" src={cardimage} alt="cardimage" />
         </div>
         <div className="backSide">
-          <p className="title">BACK SIDE</p>
+          <p className="title back-title">BACK SIDEFRONT SIDEFRONT SIDE</p>
           <p>Leave Me</p>
         </div>
       </div>

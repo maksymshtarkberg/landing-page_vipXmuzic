@@ -56,3 +56,21 @@
   font-size: 1rem;
   font-weight: 300;
 }
+
+@media (max-width: 600px) {
+  .social-icon,
+  .menu {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .social-icon__link,
+  .menu__link {
+    margin: 5px 10px;
+    font-size: 1rem;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
+  }
+}

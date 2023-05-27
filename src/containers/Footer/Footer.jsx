@@ -5,47 +5,47 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Footer = () => {
   return (
-    <footer class="footer">
-      <ul class="social-icon">
-        <li class="social-icon__item">
-          <a class="social-icon__link" href="#">
+    <footer className="footer">
+      <ul className="social-icon">
+        <li className="social-icon__item">
+          <a className="social-icon__link" href="#">
             <FacebookTwoToneIcon />
           </a>
         </li>
-        <li class="social-icon__item">
-          <a class="social-icon__link" href="#">
+        <li className="social-icon__item">
+          <a className="social-icon__link" href="#">
             <LinkedInIcon />
           </a>
         </li>
-        <li class="social-icon__item">
-          <a class="social-icon__link" href="#">
+        <li className="social-icon__item">
+          <a className="social-icon__link" href="#">
             <InstagramIcon />
           </a>
         </li>
       </ul>
-      <ul class="menu">
-        <li class="menu__item">
-          <a class="menu__link" href="#">
+      <ul className="menu">
+        <li className="menu__item">
+          <a className="menu__link" href="#">
             Home
           </a>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">
+        <li className="menu__item">
+          <a className="menu__link" href="#">
             About
           </a>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">
+        <li className="menu__item">
+          <a className="menu__link" href="#">
             Services
           </a>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">
+        <li className="menu__item">
+          <a className="menu__link" href="#">
             Team
           </a>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">
+        <li className="menu__item">
+          <a className="menu__link" href="#">
             Contact
           </a>
         </li>
