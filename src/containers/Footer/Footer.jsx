@@ -45,7 +45,7 @@ const Footer = () => {
           </a>
         </li>
       </ul>
-      <p>&copy;2023 vipXmuzic | All Rights Reserved</p>
+      <p className="footer__sign">&copy;2023 vipXmuzic | All Rights Reserved</p>
     </footer>
   );
 };

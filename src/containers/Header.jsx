@@ -46,19 +46,30 @@ const Header = () => {
   ];
 
   return (
-    <div className="header">
+    <div id="home" className="header">
       <div className="container">
         <nav className="header-menu">
           <div className="header-logo">
-            <img src={logo} alt="logo" className="header-logo" />
+            <a href="/">
+              <img src={logo} alt="logo" className="header-logo" />
+            </a>
+
             <img src={logotext} alt="" />
           </div>
 
           <ul className="header-nav">
-            <li>Contact</li>
-            <li>Features</li>
-            <li>About</li>
-            <li>Home</li>
+            <li>
+              <a href="#footer">Contact</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#features">Features</a>
+            </li>
+            <li>
+              <a href="#home">Home</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -79,7 +90,9 @@ const Header = () => {
             <div class="lightning-image-blue"></div>
           </div>
         </div>
-        <h1 className="header-cards_title">Features</h1>
+        <h1 id="features" className="header-cards_title">
+          Features
+        </h1>
         <div className="header-cards">
           {dataCards.map((card, index) => (
             <CardOne
@@ -98,7 +111,9 @@ const Header = () => {
       </div>
       <div className="container">
         <div className="header-about">
-          <h1 className="header-title">Learn about the app</h1>
+          <h1 id="about" className="header-title">
+            Learn about the app
+          </h1>
           <p className="header-text">
             Look no further! Our SBS The Show tickets are the simplest way for
             you to experience a live Kpop recording.
@@ -114,7 +129,7 @@ const Header = () => {
 
         <Footer />
       </div>
-      <div className="late-img">
+      <div id="footer" className="late-img">
         <div className="late-img-elem"></div>
       </div>
     </div>

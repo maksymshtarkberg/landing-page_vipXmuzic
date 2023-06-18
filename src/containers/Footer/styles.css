@@ -38,8 +38,8 @@
 }
 
 .menu__link {
+  color: #bd9e6b;
   font-size: 1.2rem;
-  color: #fff;
   margin: 0 10px;
   display: inline-block;
   transition: 0.5s;
@@ -53,10 +53,6 @@
 }
 
 .footer p {
-  color: #fff;
-  margin: 5px 0 5px 0;
-  font-size: 1rem;
-  font-weight: 300;
 }
 
 .late-img {
@@ -71,6 +67,13 @@
   height: 300px;
   transform: scaleX(-1);
   opacity: 0.5;
+}
+
+.footer__sign {
+  color: #d9af6a;
+  margin: 5px 0 5px 0;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 @media (max-width: 820px) {
