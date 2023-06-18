@@ -13,7 +13,7 @@ import locicon from "../assets/Location.svg";
 import driicon from "../assets/Drinks.svg";
 import crown from "../assets/Crown.svg";
 
-const Header = () => {
+const Main = () => {
   const dataCards = [
     {
       cardname: "Bidding",
@@ -136,4 +136,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Main;
