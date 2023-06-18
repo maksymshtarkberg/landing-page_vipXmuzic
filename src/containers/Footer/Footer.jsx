@@ -36,12 +36,7 @@ const Footer = () => {
         </li>
         <li className="menu__item">
           <a className="menu__link" href="#">
-            Services
-          </a>
-        </li>
-        <li className="menu__item">
-          <a className="menu__link" href="#">
-            Team
+            Features
           </a>
         </li>
         <li className="menu__item">

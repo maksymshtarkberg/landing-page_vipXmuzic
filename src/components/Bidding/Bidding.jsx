@@ -92,9 +92,11 @@ export default function TransitionsSnackbar() {
       </svg>
       <p className={`bid-ammount ${svgGlow ? "svg-glow" : ""}`}>{`$${sum}`}</p>
       <div className="big-modal">
-        {state.open > 0 && (
+        {state.open === true && (
           <Snackbar
-            className="svg-glow"
+            TransitionProps={{
+              className: svgGlow ? "svg-glow" : "",
+            }}
             open={svgGlow}
             onClose={handleClose}
             TransitionComponent={state.Transition}

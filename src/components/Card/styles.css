@@ -32,20 +32,20 @@
   font-weight: 500;
   font-size: 24px;
   text-align: center;
-  background: linear-gradient(106.4deg, #bc8c46 11.37%, #ffde76 83.54%);
+  background: linear-gradient(106.4deg, #755d39 11.37%, #1b1912 83.54%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
   text-align: center;
   margin: 0;
-  text-shadow: 0px 7px 15px rgb(183 111 18 / 59%),
-    -7px -7px 16px rgb(191 189 93 / 54%);
+  text-shadow: 0px 7px 15px rgb(183 111 18 / 80%),
+    -7px -7px 16px rgb(191 189 93 / 20%);
   padding-top: 60px;
 }
 
 .back-title {
-  background: linear-gradient(336deg, #fad355 11.37%, #8c6324 83.54%);
+  background: linear-gradient(336deg, #392e0b 11.37%, #58411e 83.54%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -90,6 +90,8 @@
 
 .frontSide,
 .frontSide::before {
+  transform: rotateY(0deg);
+
   background: linear-gradient(
     135deg,
     rgba(59, 209, 255, 0) 27.07%,
@@ -138,7 +140,7 @@
   padding-bottom: 15px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 820px) {
   .myCard {
     margin: 20px auto;
   }

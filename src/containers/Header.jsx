@@ -1,6 +1,6 @@
 import "./styles.css";
 import BasicModal from "../components/Modal-form";
-import React, { useEffect } from "react";
+import React from "react";
 import logo from "../assets/Logo.png";
 import logotext from "../assets/Text logo.png";
 import CardOne from "../components/Card/Cardv1";
@@ -12,8 +12,6 @@ import djicon from "../assets/musicbottom.svg";
 import locicon from "../assets/Location.svg";
 import driicon from "../assets/Drinks.svg";
 import crown from "../assets/Crown.svg";
-import lighten from "../assets/lig-red.png";
-import lightenBlue from "../assets/lig-blue.png";
 
 const Header = () => {
   const dataCards = [
@@ -108,14 +106,16 @@ const Header = () => {
 
           <BasicModal />
         </div>
+
         <div className="header-paragraf">
           <h2 className="header-bid_title">Songs bidding</h2>
           <TransitionsSnackbar />
         </div>
 
-        <div className="container">
-          <Footer />
-        </div>
+        <Footer />
+      </div>
+      <div className="late-img">
+        <div className="late-img-elem"></div>
       </div>
     </div>
   );
