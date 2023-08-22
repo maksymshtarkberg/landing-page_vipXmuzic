@@ -27,6 +27,30 @@
     <title>vipXmuzic</title>
   </head>
   <body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+      integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      SmoothScroll({
+        animationTime: 800,
+        stepSize: 75,
+
+        accelerationDelta: 15,
+        accelerationMax: 2,
+
+        keyboardSupport: true,
+
+        arrowScroll: 50,
+
+        pulseAlgorithm: true,
+        pulseScale: 4,
+        pulseNormalize: 1,
+
+        touchpadSupport: true,
+      });
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

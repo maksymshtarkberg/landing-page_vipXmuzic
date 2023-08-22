@@ -1,63 +1,45 @@
 import "./styles.css";
 import BasicModal from "../components/Modal-form";
-import React from "react";
+import React, { useRef } from "react";
 import logo from "../assets/Logo.png";
 import logotext from "../assets/Text logo.png";
-import CardOne from "../components/Card/Cardv1";
+import CardsSection from "../containers/Main/Main";
 import Footer from "../containers/Footer/Footer";
 import TransitionsSnackbar from "../components/Bidding/Bidding";
-
-import bigicon from "../assets/Bidding.svg";
-import djicon from "../assets/musicbottom.svg";
-import locicon from "../assets/Location.svg";
-import driicon from "../assets/Drinks.svg";
-import crown from "../assets/Crown.svg";
+import { useScroll, motion, useTransform } from "framer-motion";
 
 const Main = () => {
-  const dataCards = [
-    {
-      cardname: "Bidding",
-      carddescription: "This is a description of the bidding card",
-      cardimage: bigicon,
-      crown: crown,
-      phraseStart: "Raise your bid to win",
-    },
-    {
-      cardname: "DJ Playlist",
-      carddescription: "This is a description of the product card",
-      cardimage: djicon,
-      crown: crown,
-      phraseStart: "Playlist",
-    },
-    {
-      cardname: "Location",
-      carddescription: "This is a description of the contact card",
-      cardimage: locicon,
-      crown: crown,
-      phraseStart: "Come as you are",
-    },
-    {
-      cardname: "Drinks",
-      carddescription: "This is a description of the contact card",
-      cardimage: driicon,
-      crown: crown,
-      phraseStart: "Order",
-    },
-  ];
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  });
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+
+  console.log(scrollYProgress);
 
   return (
     <div id="home" className="header">
       <div className="container">
         <nav className="header-menu">
-          <div className="header-logo">
+          <motion.div
+            className="header-logo"
+            initial={{ opacity: 0, scale: 0.7 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.4 }}
+          >
             <a href="/">
               <img src={logo} alt="logo" className="header-logo" />
             </a>
-
             <img src={logotext} alt="" />
-          </div>
-
-          <ul className="header-nav">
+          </motion.div>
+          <motion.ul
+            className="header-nav"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.1 }}
+          >
             <li>
               <a href="#footer">Contact</a>
             </li>
@@ -70,46 +52,36 @@ const Main = () => {
             <li>
               <a href="#home">Home</a>
             </li>
-          </ul>
+          </motion.ul>
         </nav>
       </div>
       <div className="header-box container">
-        <div className="header-phone"></div>
-        <div className="header-box_title">
+        <motion.div
+          className="header-phone"
+          initial={{ x: "-50%" }}
+          animate={{ x: 0 }}
+          transition={{ duration: 1.1 }}
+        ></motion.div>
+        <motion.div
+          className="header-box_title"
+          initial={{ x: "50%" }}
+          animate={{ x: 0 }}
+          transition={{ duration: 1.1 }}
+        >
           <img src={logotext} alt="logo" />
           <p className="header-text">
             Look no further! Our SBS The Show tickets are the simplest way for
             you to experience a live Kpop recording.
           </p>
-        </div>
+        </motion.div>
       </div>
 
-      <div className="container">
-        <div className="lightning">
-          <div class="lightning-wrapper-blue">
-            <div class="lightning-image-blue"></div>
-          </div>
-        </div>
-        <h1 id="features" className="header-cards_title">
-          Features
-        </h1>
-        <div className="header-cards">
-          {dataCards.map((card, index) => (
-            <CardOne
-              phraseStart={card.phraseStart}
-              key={index}
-              crown={card.crown}
-              cardname={card.cardname}
-              carddescription={card.carddescription}
-              cardimage={card.cardimage}
-            />
-          ))}
-        </div>
-        <div class="lightning-wrapper">
-          <div class="lightning-image"></div>
-        </div>
-      </div>
-      <div className="container">
+      <CardsSection />
+      <motion.div
+        ref={ref}
+        style={{ scale: scaleProgress, opacity: opacityProgress }}
+        className="container"
+      >
         <div className="header-about">
           <h1 id="about" className="header-title">
             Learn about the app
@@ -128,7 +100,7 @@ const Main = () => {
         </div>
 
         <Footer />
-      </div>
+      </motion.div>
       <div id="footer" className="late-img">
         <div className="late-img-elem"></div>
       </div>

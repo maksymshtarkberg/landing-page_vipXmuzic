@@ -7,6 +7,7 @@
   max-width: 1440px;
   min-width: 600px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .header::before {
@@ -198,8 +199,10 @@
 }
 
 .header-cards {
+  position: relative;
   display: flex;
   justify-content: center;
+  margin-top: 200px;
 }
 
 .header-about {
@@ -250,7 +253,7 @@
 
 .lightning-image {
   position: absolute;
-  top: -160px;
+  top: -324px;
   opacity: 0.8;
   background: url("../assets/lig-red.png") no-repeat center right;
   width: 148px;
