@@ -1,7 +1,7 @@
 import CardOne from "../../components/Card/Cardv1";
 import { dataCards } from "./CardsData";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
 
 const CardsSection = () => {

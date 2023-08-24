@@ -55,6 +55,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 210px;
 }
 
 .header-nav {
@@ -73,7 +74,13 @@
 .header-logo {
   object-fit: cover;
   width: 115px;
+  height: 140px;
   z-index: 1;
+}
+
+.header-logo_text {
+  width: 115px;
+  height: 40px;
 }
 
 .header-title {
@@ -82,6 +89,11 @@
 
 .header-text {
   color: rgba(72, 89, 114, 1);
+}
+
+.header-box_title img {
+  width: 388px;
+  height: 135px;
 }
 
 .header-paragraf {
@@ -256,6 +268,7 @@
   top: -324px;
   opacity: 0.8;
   background: url("../assets/lig-red.png") no-repeat center right;
+  background-size: 148px, 334px;
   width: 148px;
   height: 334px;
 }
@@ -272,6 +285,7 @@
   right: 30px;
   opacity: 0.5;
   background: url("../assets/lig-blue.png") no-repeat center right;
+  background-size: 266px, 266px;
   width: 266px;
   height: 266px;
 }
@@ -289,6 +303,7 @@
   .header-menu {
     flex-direction: column;
     align-items: flex-start;
+
     padding-top: 20px;
   }
 
@@ -336,7 +351,7 @@
     width: 100%;
     max-width: 375px;
     right: 0;
-    top: -150px;
+    top: 50px;
     background-size: cover;
     z-index: auto;
     background-color: transparent;
@@ -352,7 +367,6 @@
   .header-box_title img {
     position: relative;
     z-index: 2;
-    width: 340px;
     object-fit: cover;
     margin-bottom: 7px;
   }
@@ -371,7 +385,7 @@
   }
 
   .header-box_title {
-    margin-top: 75px;
+    margin-top: 115px;
   }
 
   .header-about {
@@ -393,10 +407,9 @@
   }
 
   .header-box {
-    position: relative;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 80px;
+    height: 400px;
   }
 
   .header-btn {

@@ -17,8 +17,6 @@ const Main = () => {
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
 
-  console.log(scrollYProgress);
-
   return (
     <div id="home" className="header">
       <div className="container">
@@ -32,7 +30,13 @@ const Main = () => {
             <a href="/">
               <img src={logo} alt="logo" className="header-logo" />
             </a>
-            <img src={logotext} alt="" />
+            <div>
+              <img
+                src={logotext}
+                alt="logo-text"
+                className="header-logo_text"
+              />
+            </div>
           </motion.div>
           <motion.ul
             className="header-nav"

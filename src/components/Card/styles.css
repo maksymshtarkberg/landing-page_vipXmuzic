@@ -137,7 +137,9 @@
 }
 
 .card-fun-icon {
-  padding-bottom: 15px;
+  width: 33px;
+  height: 33px;
+  object-fit: cover;
 }
 
 @media (max-width: 820px) {
